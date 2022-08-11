@@ -1,7 +1,28 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  loaders: [
+    { test: /\.html$/, loader: 'html-loader' }
+  ]
 }
-
-module.exports = nextConfig
+rewrites: async () => [
+  {
+    source: "/public/dog.html",
+    destination: "/pages/api/dog.js",
+  },
+  {
+    source: "/public/cat.html",
+    destination: "/pages/api/cat.js",
+  },
+  {
+    source: "/public/home.html",
+    destination: "/pages/api/home.js",
+  },
+  {
+    source: "/public/food.html",
+    destination: "/pages/api/food.js",
+  },
+  {
+    source: "/public/login.html",
+    destination: "/pages/api/login.js",
+  },
+]

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<style>
+  body {
+    background-color: #000;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  }
+</style>
+<html>
+  <head>
+    <title>Cats4Sale</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="styles/materialize.min.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="styles/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+  <script>
+    function buyCat(id) {
+      // change source of img
+      document.getElementById(id).src =
+        "https://image.shutterstock.com/image-vector/sold-stamp-flat-vector-icon-260nw-441691231.jpg";
+
+      // change text
+      document.getElementById(id).alt = "sold";
+      // create purchased alert
+      alert("You have purchased this Cat!");
+    }
+  </script>
+  <body>
+    <h1 class="hello">Cats For Sale</h1>
+    <div class="container">
+      <div class="child" data-tilt>
+        <h3>British Shorthair</h3>
+        <img
+          id="1"
+          src="https://www.purina.co.uk/sites/default/files/2022-06/British-Shorthair.jpg?itok=eFXNhiXz"
+          alt="British Shorthair"
+          class="image"
+        />
+        <p class="hello">
+          Name: Tabby<br/ > Age: 6 Months<br/ > Personality: Adventurous<br />
+          Price: 0.002650 BTC<br/ > <br/ >
+          <button class="button1" onclick="buyCat('1')">Buy</button>
+        </p>
+      </div>
+      <br />
+      <div class="child" data-tilt>
+        <h3>Persian</h3>
+        <img
+          id="2"
+          src="https://s36537.pcdn.co/wp-content/uploads/2018/02/Flat-faced-Persian.jpg.optimal.jpg"
+          alt="Persian"
+          class="image"
+        />
+        <p class="hello"></p>
+        <p class="hello">
+          Name: Luna<br/ > Age: 3 Months<br/ > Personality: Friendly<br />
+          Price: 0.00923 BTC<br/ > <br/ >
+          <button class="button2" onclick="buyCat('2')">Buy</button>
+        </p>
+      </div>
+      <br />
+      <div class="child" data-tilt>
+        <h3>Siamese</h3>
+        <img
+          id="3"
+          src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=400,height=400,fit=cover/animal/breed/pictures/613f5a38724fe357976956.jpg"
+          alt="Siamese"
+          class="image"
+        />
+        <p class="hello">
+          Name: Milo<br/ > Age: 2<br/ > Personality: Vibrant<br />
+          Price: 0.003271 BTC<br/ > <br/ >
+          <button class="button3" onclick="buyCat('3')">Buy</button>
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/vanilla-tilt.min.js"></script>
+  </body>
+</html>
