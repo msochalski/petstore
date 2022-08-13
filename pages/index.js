@@ -73,13 +73,13 @@ export default function Home() {
   const queryData = async () => {
     const authToken = Cookies.get('fauna-auth');
     const faunaClient = new faunadb.Client({ secret: authToken });
-    const movies = await faunaClient.query(
+    const animals = await faunaClient.query(
       Map(
-        Paginate(Documents(Collection('Movie'))),
+        Paginate(Documents(Collection('Animals'))),
         Lambda(x => Get(x))
       )
     )
-    console.log('--->', movies);
+    console.log('--->', animals);
   }
 
   return (

@@ -2,7 +2,10 @@ module.exports = {
   reactStrictMode: true,
   loaders: [
     { test: /\.html$/, loader: 'html-loader' }
-  ]
+  ],
+  images: {
+    domains: ['t3.ftcdn.net']
+  }
 }
 rewrites: async () => [
   {

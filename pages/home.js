@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import Script from "next/script";
 import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
 function Home() {
   return (
     <>
@@ -14,13 +15,13 @@ function Home() {
             rel="stylesheet"
           />
           <link
-            href="css/materialize.min.css"
+            href="../css/materialize.min.css"
             type="text/css"
             rel="stylesheet"
             media="screen,projection"
           />
           <link
-            href="css/style.css"
+            href="../css/style.css"
             type="text/css"
             rel="stylesheet"
             media="screen,projection"
@@ -33,41 +34,36 @@ function Home() {
           </a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
-              <a href="/dog">Dogs</a>
+              <Link href="/dog">Dogs</Link>
             </li>
             <li>
-              <a href="/cat">Cats</a>
+              <Link href="/cat">Cats</Link>
             </li>
             <li>
-              <a href="/food">Food</a>
-            </li>
-            <li>
-              <a href="/converter">Crypto Conversion</a>
+              <Link href="/food">Food</Link>
             </li>
           </ul>
         </div>
       </nav>
-      <div id="index-banner" className="parallax-container">
-        <div className="section no-pad-bot">
-          <div className="container">
-            <br />
-            <br />
-            <h1 className="header center teal-text text-lighten-2">
-              Pet Store
-            </h1>
-            <div className="row center">
-              <h5 className="header col s12 light">
-                A modern responsive front-end website for a Pet Shop
-              </h5>
-            </div>
-            <br />
-            <br />
+      <br/>
+      <br/>
+      <div className="container">
+        <div className="row">
+          <div className="col s12 center">
+          Powered By <a
+              className="blue-text text-lighten-3"
+              href="https://web3.foundation/"
+            >
+              Web3
+            </a>.
           </div>
         </div>
-        <div className="parallax">
-          <img src="/images/petshop-bg.jpg" alt="petshopbackground"/>
-        </div>
-      </div>
+      </div>      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <div className="container">
         <div className="section">
           <div className="row">
@@ -85,12 +81,23 @@ function Home() {
                 Are you Ready?
               </p>
               <button>
-                <a href="converter.html">Im Ready</a>
+                <Link href="/">Im Ready</Link>
               </button>
             </div>
           </div>
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>      
+      <br/>
+      <br/>
       <footer className="page-footer teal">
         <div className="footer-copyright">
           <div className="container">
@@ -106,8 +113,8 @@ function Home() {
       </footer>
 
         <Script src="https://code.jquery.com/jquery-2.1.1.min.js"></Script>
-        <Script src="./pages/api/materialize.js"></Script>
-        <Script src="pages\api\init.js"></Script>
+        <Script src="../pages/api/materialize.js"></Script>
+        <Script src="../pages/api/init.js"></Script>
 
     </>
   );
